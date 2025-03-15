@@ -1,0 +1,108 @@
+/* General container for the jobs */
+.freshers1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 80%; /* 80% width for the job list */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Grid for desktop and tablet */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* First Row - Two Jobs */
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* 80% width for first row */
+    margin: 0 auto;
+}
+
+/* Second Row - Three Jobs */
+.second-row {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; /* 80% width for second row */
+    margin: 0 auto;
+}
+
+/* Horizontal scrollable container for second column (tablet and mobile views) */
+.scrollable-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; /* Adjust the width of the scrollable container */
+}
+
+.scrollable-container .job-card {
+    flex: 1 0 auto;
+    min-width: 120px; /* Minimum width for each job card */
+}
+
+/* Responsive Styles */
+
+/* Tablet View (<= 768px) */
+@media (max-width: 768px) {
+    /* Single column layout for tablet */
+    .first-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Scrollable container for the second row (jobs 3, 4, 5) */
+    .second-row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .scrollable-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        width: 100%; /* Adjust width of the scrollable container */
+    }
+
+    .scrollable-container .job-card {
+        min-width: 100px; /* Adjust job card size for tablet */
+    }
+}
+
+/* Mobile View (<= 520px) */
+@media (max-width: 520px) {
+    /* Single column layout for first row (only Job 1) */
+    .first-row {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    /* Single column layout for second row, horizontally scrollable for jobs 2, 3, 4, 5 */
+    .second-row {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .scrollable-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        width: 100%; /* Adjust width of the scrollable container */
+        height: 100%;
+    }
+
+    .scrollable-container .job-card {
+        min-width: 190px; /* Adjust job card size for mobile view */
+    }
+}

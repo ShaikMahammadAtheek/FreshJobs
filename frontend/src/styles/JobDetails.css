@@ -1,0 +1,264 @@
+/* 
+.job-details-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(208, 208, 208);;
+}
+
+.job-details {
+    width: 50%; 
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.job-detail-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+.apply-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background: #0056b3;
+}
+
+
+@media (max-width: 1024px) {
+    .job-details {
+        width: 70%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .job-details {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .job-details {
+        width: 95%; 
+    }
+}
+
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3; 
+} */
+
+
+
+/* Job Details Main Container */
+.job-details-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 100px auto 20px; /* Added margin-top to prevent overlap with fixed Navbar */
+    gap: 20px;
+    background: #fff;
+}
+
+/* Left Section */
+.left-section {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Section */
+.right-section {
+    width: 26%;
+    /* background: #f9f9f9; */
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Job Title */
+.job-titles {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(5, 46, 103); /* Matches Navbar */
+}
+
+/* Company Name */
+.company {
+    font-size: 18px;
+    color: gray;
+}
+
+/* Red Title */
+.red-title {
+    color: red;
+    font-size: 25px;
+}
+
+/* Posted Date */
+.posted-date {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Job Detail Image */
+.job-detail-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Job Description */
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Apply Button */
+.apply-btn {
+    display: block;
+    text-align: center;
+    background: rgb(5, 46, 103);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Apply Button Hover Effect */
+.apply-btn:hover {
+    background: rgba(5, 46, 103, 0.8);
+}
+
+/* Related & Latest Job Titles */
+.related-jobs-title, .latest-jobs-title {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(5, 46, 103); /* Matches Navbar */
+}
+
+/* Related Jobs Section */
+.related-jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Related Job Cards */
+.related-job-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Related Job Card Hover */
+.related-job-card:hover {
+    transform: scale(1.05);
+}
+
+/* Latest Job Cards */
+.latest-job-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 110px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Latest Job Card Hover */
+.latest-job-card:hover {
+    transform: scale(1.05);
+}
+
+/* Job Card Images */
+.related-job-card img, .latest-job-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/* Job Card Text */
+.related-job-card p, .latest-job-card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Ensure Proper Spacing from Navbar */
+@media (max-width: 1024px) {
+    .job-details-container {
+        width: 100%;
+        margin: 110px auto 20px; /* Increased margin-top for spacing */
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .job-details-container {
+        flex-direction: column;
+        width: 95%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin-top: 120px; /* Extra space below navbar */
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        max-width: 100%;
+    }
+    .job-detail-image {
+        max-width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,146 @@
+/* 
+.footer {
+    background-color: rgb(5, 46, 103); 
+    color: #f1f1f1; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+
+.footer-logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    border: 3px solid white; 
+}
+
+
+.footer-social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #f1f1f1; 
+}
+
+@media (max-width: 768px) {
+    .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .footer-social img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 80px;
+        height: 80px;
+    }
+    .footer-social img {
+        width: 30px;
+        height: 30px;
+    }
+} */
+
+
+
+.footer {
+    background-color: rgb(5, 46, 103); 
+    color: #f1f1f1; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Updated Footer Logo */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo-circle {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white; 
+    color: rgb(5, 46, 103);  
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid white; 
+}
+
+/* Social Media Icons */
+.footer-social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #f1f1f1; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-logo-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+    .footer-social img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+    .footer-social img {
+        width: 30px;
+        height: 30px;
+    }
+}

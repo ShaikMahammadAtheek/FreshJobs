@@ -1,0 +1,252 @@
+/* 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(5, 46, 103); 
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+
+.navbar-content {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: rgb(5, 46, 103)
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+ 
+    .close-menu {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .close-menu {
+        display: none;
+    }
+} */
+
+
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(5, 46, 103); /* Updated background color */
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Navbar Content */
+.navbar-content {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo - Circular Text */
+.logo-circle {
+    width: 70px;
+    height: 70px;
+    background-color: white; /* Background color */
+    color: rgb(5, 46, 103); /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-direction: column;
+    line-height: normal;
+}
+
+.logo-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Menu Items */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Updated text color */
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+}
+
+/* Active Page Highlight */
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: rgb(5, 46, 103); /* Updated background color */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    /* Close Button */
+    .close-menu {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/* Hide Close Button on Normal Screens */
+@media (min-width: 769px) {
+    .close-menu {
+        display: none;
+    }
+}
