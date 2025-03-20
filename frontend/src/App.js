@@ -8,8 +8,7 @@ import Internship from "./pages/Internship";
 import Support from "./pages/Support";
 import JobDetails from "./pages/JobDetails";
 import Footer from "./components/Footer";
-// import Biisp from "./pages/Biisp";
-import Freshers1 from "./pages/Freshers1";
+
 //import "./styles/App.css"; // Ensure your styles are in the correct folder
 
 const App = () => {
@@ -26,7 +25,7 @@ const App = () => {
           <Route path="/job/:id" element={<JobDetails />} />
         </Routes>
       </div>
-      <Freshers1/>
+
       <Footer />
     </Router>
   );

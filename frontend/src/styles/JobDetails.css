@@ -81,6 +81,211 @@
 
 
 
+/* Job Details Main Container___________ Main Code ___________________________________________________*/
+/* 
+.job-details-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 100px auto 20px; 
+    gap: 20px;
+    background: #fff;
+}
+
+
+.left-section {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.right-section {
+    width: 26%;
+    * background: #f9f9f9; *
+    padding: 15px;
+    border-radius: 8px;
+    * box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); *
+}
+
+
+.job-titles {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(5, 46, 103); 
+}
+
+
+.company {
+    font-size: 18px;
+    color: gray;
+}
+
+
+.red-title {
+    color: red;
+    font-size: 25px;
+}
+
+
+.posted-date {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.job-detail-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.apply-btn {
+    display: block;
+    text-align: center;
+    background: rgb(5, 46, 103);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+    width: 90%;
+}
+
+
+.apply-btn:hover {
+    background: rgba(5, 46, 103, 0.8);
+}
+
+
+.related-jobs-title, .latest-jobs-title {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(5, 46, 103);
+}
+
+
+.related-jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.related-job-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.related-job-card:hover {
+    transform: scale(1.05);
+}
+
+.latest-job-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 110px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.latest-job-card:hover {
+    transform: scale(1.05);
+}
+
+
+.related-job-card img, .latest-job-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+
+.related-job-card p, .latest-job-card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+    .job-details-container {
+        width: 100%;
+        margin: 110px auto 20px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .job-details-container {
+        flex-direction: column;
+        width: 95%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin-top: 120px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        max-width: 100%;
+    }
+    .job-detail-image {
+        max-width: 90%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Job Details Main Container */
 .job-details-container {
     display: flex;
@@ -93,20 +298,18 @@
 
 /* Left Section */
 .left-section {
-    width: 60%;
+    width: 65%;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Right Section */
+/* Right Section (Removed styling since Latest Jobs are not shown anymore) */
 .right-section {
-    width: 26%;
-    /* background: #f9f9f9; */
-    padding: 15px;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 0%; /* Set to 0% to remove the right section completely */
+    padding: 0;
+    display: none;
 }
 
 /* Job Title */
@@ -114,6 +317,7 @@
     font-size: 35px;
     font-weight: bold;
     color: rgb(5, 46, 103); /* Matches Navbar */
+    margin-bottom: 15px; /* Added space below title */
 }
 
 /* Company Name */
@@ -146,6 +350,8 @@
     font-size: 16px;
     line-height: 1.5;
     color: #333;
+    margin-bottom: 20px; /* Added space below description */
+    white-space: normal; /* Ensures content breaks properly */
 }
 
 /* Apply Button */
@@ -160,6 +366,7 @@
     font-weight: bold;
     margin-top: 15px;
     transition: 0.3s ease-in-out;
+    width: 90%;
 }
 
 /* Apply Button Hover Effect */
@@ -168,7 +375,7 @@
 }
 
 /* Related & Latest Job Titles */
-.related-jobs-title, .latest-jobs-title {
+.related-jobs-title {
     margin-top: 30px;
     font-size: 20px;
     font-weight: bold;
@@ -198,34 +405,15 @@
     transform: scale(1.05);
 }
 
-/* Latest Job Cards */
-.latest-job-card {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    min-height: 110px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Latest Job Card Hover */
-.latest-job-card:hover {
-    transform: scale(1.05);
-}
-
 /* Job Card Images */
-.related-job-card img, .latest-job-card img {
+.related-job-card img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
 }
 
 /* Job Card Text */
-.related-job-card p, .latest-job-card p {
+.related-job-card p {
     font-size: 16px;
     font-weight: bold;
 }
@@ -246,19 +434,53 @@
 
     .job-details-container {
         flex-direction: column;
-        width: 95%;
+        width: 96%;
         max-width: 100%;
         overflow-x: hidden;
         margin-top: 120px; /* Extra space below navbar */
+        
     }
 
-    .left-section, .right-section {
+    .left-section {
         width: 100%;
         max-width: 100%;
     }
+
+    /* Adjust Job Title for Mobile */
+    .job-titles {
+        font-size: 28px; /* Smaller font size for mobile */
+        margin-bottom: 10px; /* Reduced bottom margin */
+    }
+
+    /* Adjust Job Description for Mobile */
+    .description {
+        font-size: 14px; /* Smaller font size for mobile */
+        line-height: 1.6; /* Adjusted line height for better readability */
+        margin-bottom: 15px; /* Slightly reduced margin */
+        
+        
+    }
+
+    /* Adjust Section Content for Mobile */
+    .job-section h3 {
+        font-size: 18px; /* Adjusted for mobile */
+    }
+
+    .job-section p {
+        font-size: 14px; /* Smaller font size for section content */
+        line-height: 1.6; /* Adjusted line height for better readability */
+    }
+
+    /* Job Detail Image */
     .job-detail-image {
         max-width: 90%;
         height: auto;
         object-fit: contain;
+        margin-bottom: 20px; /* Added space below image */
+    }
+
+    /* Ensure Right Section is Not Visible on Mobile */
+    .right-section {
+        display: none; /* Ensures the right section is not visible on mobile */
     }
 }

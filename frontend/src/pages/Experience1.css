@@ -1,0 +1,90 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; */
+}
+
+.experience-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.experience-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: rgb(5, 46, 103);
+    font-weight: bold;
+    position: relative;
+
+}
+
+.experience-title::before,
+.experience-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: rgb(5, 46, 103);
+    margin: 5px auto;
+    width: 80%;
+}
+
+.job-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    margin: auto;
+}
+
+.job-item {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.job-item h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.job-item:hover h3 {
+    color: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .job-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .job-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    .job-item img {
+        object-fit: cover;
+    }
+    .experience-title::before,
+.experience-title::after {
+    width: 92%;
+}
+}

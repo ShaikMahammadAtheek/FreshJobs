@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import JobCard from "../components/JobCard";
 import "../styles/Home.css";
+import Freshers1 from "./Freshers1";
+import Internship1 from "./Internship1";
+import Experience1 from "./Experience1";
 
 function Home() {
     const [jobs, setJobs] = useState([]);
@@ -35,8 +38,9 @@ function Home() {
     const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
 
     return (
+        <>
         <div className="home-container">
-            <h2>Latest Jobs</h2>
+            <h2>Latest Trending Jobs</h2>
 
             {loading && <p>Loading jobs...</p>}
             {error && <p className="error">{error}</p>}
@@ -66,6 +70,10 @@ function Home() {
                 </div>
             )}
         </div>
+        <Freshers1/>
+        <Internship1/>
+        <Experience1/>
+        </>
     );
 }
 

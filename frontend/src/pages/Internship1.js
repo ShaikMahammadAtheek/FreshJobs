@@ -1,14 +1,14 @@
 // import React, { useState, useEffect } from "react";
-// import "./Freshers1.css";
+// import "./Internship1.css";
 
-// const Freshers1 = () => {
+// const Internship1 = () => {
 //   const [jobs, setJobs] = useState([]);
 
 //   useEffect(() => {
-//     fetch("http://localhost:5000/api/jobs?category=Freshers")
+//     fetch("http://localhost:5000/api/jobs?category=Internship")
 //       .then((res) => res.json())
 //       .then((data) => {
-//         const filteredJobs = data.filter(job => job.category === "Freshers");
+//         const filteredJobs = data.filter(job => job.category === "Internship");
 //         setJobs(filteredJobs);
 //       })
 //       .catch((err) => console.log(err));
@@ -16,7 +16,7 @@
 
 //   return (
 //     <div className="experience-section">
-//       <h2 className="experience-title">Fresher Job Openings</h2>
+//       <h2 className="experience-title">Internship Job Openings</h2>
 //       <div className="job-grid">
 //         {jobs.length > 0 ? (
 //           jobs.slice(0, 5).map((job) => (
@@ -26,14 +26,14 @@
 //             </div>
 //           ))
 //         ) : (
-//           <p>No Fresher jobs found</p>
+//           <p>No Internship jobs found</p>
 //         )}
 //       </div>
 //     </div>
 //   );
 // };
 
-// export default Freshers1;
+// export default Internship1;
 
 
 
@@ -41,14 +41,14 @@
 import React, { useState, useEffect } from "react";
 import "./Experience1.css";
 
-const Freshers1 = () => {
+const Internship1 = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/jobs?category=Freshers")
+    fetch("http://localhost:5000/api/jobs?category=Internship")
       .then((res) => res.json())
       .then((data) => {
-        const filteredJobs = data.filter(job => job.category === "Freshers");
+        const filteredJobs = data.filter(job => job.category === "Internship");
         setJobs(filteredJobs);
       })
       .catch((err) => console.log(err));
@@ -73,4 +73,4 @@ const Freshers1 = () => {
   );
 };
 
-export default Freshers1;
+export default Internship1;
