@@ -5,6 +5,10 @@ const dotenv = require("dotenv"); // ✅ Load Environment Variables
 const Job = require("./models/Job");
 const Support = require("./models/Support"); // ✅ Import Support Model
 
+
+// 🟢 Load Environment Variables from .env
+dotenv.config();
+
 const app = express();
 app.use(express.json());
 
