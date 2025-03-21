@@ -7,7 +7,7 @@ const Experience1 = () => {
   const navigate = useNavigate(); // Initialize navigate function
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/jobs?category=Experience")
+    fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Experience`)
       .then((res) => res.json())
       .then((data) => {
         const filteredJobs = data.filter(job => job.category === "Experience");

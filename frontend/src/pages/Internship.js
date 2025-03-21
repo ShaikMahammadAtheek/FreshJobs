@@ -8,7 +8,7 @@ function Internship() {
     const jobsPerPage = 15;
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/jobs?category=Internship") // ✅ Correct API query
+        fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Internship`) // ✅ Correct API query
             .then((res) => res.json())
             .then((data) => {
                 const filteredJobs = data.filter(job => job.category === "Internship"); // ✅ Ensures only "Internship" jobs are shown

@@ -45,7 +45,7 @@ const Internship1 = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/jobs?category=Internship")
+    fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Internship`)
       .then((res) => res.json())
       .then((data) => {
         const filteredJobs = data.filter(job => job.category === "Internship");

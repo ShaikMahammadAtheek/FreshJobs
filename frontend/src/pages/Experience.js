@@ -8,7 +8,7 @@ function Experience() {
     const jobsPerPage = 15;
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/jobs?category=Experience") // ✅ Correct API query
+        fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Experience`)  // ✅ Correct API query
             .then((res) => res.json())
             .then((data) => {
                 const filteredJobs = data.filter(job => job.category === "Experience"); // ✅ Ensures only "Experience" jobs are shown

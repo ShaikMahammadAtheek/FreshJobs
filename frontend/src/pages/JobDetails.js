@@ -148,6 +148,8 @@
 
 // export default JobDetails;
 
+
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/JobDetails.css";
@@ -162,7 +164,7 @@ function JobDetails() {
     useEffect(() => {
         const fetchJobDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/jobs/${id}`);
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/jobs/${id}`);
                 if (!response.ok) {
                     throw new Error("Job not found");
                 }
@@ -170,7 +172,7 @@ function JobDetails() {
                 setJob(data);
 
                 // Fetch related jobs based on category
-                const relatedResponse = await fetch(`http://localhost:5000/api/jobs/category/${data.category}`);
+                const relatedResponse = await fetch(`${process.env.REACT_APP_API_URL}/jobs/category/${data.category}`);
                 const relatedData = await relatedResponse.json();
                 setRelatedJobs(relatedData.slice(0, 5)); // Show 5 related jobs
             } catch (err) {

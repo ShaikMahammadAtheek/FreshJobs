@@ -8,7 +8,7 @@ function Freshers() {
     const jobsPerPage = 15;
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/jobs?category=Freshers") // ✅ Correct API query
+        fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Freshers`) // ✅ Correct API query
             .then((res) => res.json())
             .then((data) => {
                 const filteredJobs = data.filter(job => job.category === "Freshers"); // ✅ Ensures only "Freshers" jobs are shown

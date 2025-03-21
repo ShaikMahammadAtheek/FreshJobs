@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const dotenv = require("dotenv"); // ✅ Load Environment Variables
 const Job = require("./models/Job");
 const Support = require("./models/Support"); // ✅ Import Support Model
 
@@ -9,12 +10,12 @@ app.use(express.json());
 
 // 🟢 **Allow CORS (Cross-Origin Requests)**
 app.use(cors({
-    origin: "http://localhost:3000", // Change this to your frontend URL
+    origin: process.env.CORS_ORIGIN || "http://localhost:3000", // Default if not set
     credentials: true
 }));
 
 // 🟢 **Connect to MongoDB**
-mongoose.connect("mongodb://127.0.0.1:27017/jobhusles", {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -105,5 +106,5 @@ app.post("/support", async (req, res) => {
 
 
 // 🟢 **Start Server**
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
