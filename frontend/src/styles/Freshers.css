@@ -72,8 +72,10 @@
 } */
 
 
+ 
+/* Main Container  Main code-------------------------------------------------------------*/
 
-/* Main Container */
+/* 
 .freshers-container {
     display: flex;
     flex-direction: column;
@@ -85,7 +87,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
 .freshers-container h2 {
     font-size: 35px;
     font-weight: bold;
@@ -93,7 +94,7 @@
     margin-bottom: 20px;
 }
 
-/* Job List */
+
 .job-list {
     display: flex;
     flex-direction: column;
@@ -101,13 +102,13 @@
     width: 100%;
 }
 
-/* No Jobs Message */
+
 .job-list p {
     font-size: 18px;
     color: gray;
 }
 
-/* Pagination */
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -136,7 +137,6 @@
     background: rgba(5, 46, 103, 0.8);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .freshers-container {
         width: 100%;
@@ -158,5 +158,128 @@
         width: 80%;
         margin-top: 120px;
         margin-left: 10px;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* Base Styles */
+.freshers-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px; /* Ensure there's space for fixed navbar */
+    background: #fff; /* Background color for fresher job list container */
+}
+
+.freshers-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(5, 46, 103);
+    text-align: center;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 18px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: #0056b3; 
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .freshers-container {
+        width: 90%; /* Adjust for tablets */
+        margin-top: 120px;
+    }
+
+    .freshers-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .pagination {
+        gap: 10px;
+    }
+
+    .pagination button {
+        width: 100px; /* Adjust button width on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .freshers-container {
+        width: 85%;
+        margin-top: 130px;
+    }
+
+    .freshers-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .job-list {
+        gap: 20px;
+    }
+
+    .pagination button {
+        width: 90px; /* Adjust button width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .freshers-container {
+        width: 95%; /* Adjust for very small screens */
+        margin-top: 140px;
+    }
+
+    .freshers-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .pagination button {
+        padding: 6px 12px;
+        width: 80px; /* Adjust button width for small screens */
     }
 }

@@ -36,13 +36,13 @@
 // export default Freshers1;
 
 
-
-
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Experience1.css";
 
 const Freshers1 = () => {
   const [jobs, setJobs] = useState([]);
+  const navigate = useNavigate(); // Initialize navigate function
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/jobs?category=Freshers`)
@@ -56,17 +56,22 @@ const Freshers1 = () => {
 
   return (
     <div className="experience-section">
-      <h2 className="experience-title">Experience Job Openings</h2>
+      <h2 className="experience-title">Freshers Job Openings</h2>
       <div className="job-grid">
         {jobs.length > 0 ? (
           jobs.slice(0, 6).map((job) => (
-            <div key={job._id} className="job-item">
+            <div 
+              key={job._id} 
+              className="job-item"
+              onClick={() => navigate(`/job/${job._id}`)} // Navigate to job details page
+              style={{ cursor: "pointer" }} // Ensures it looks clickable but without hover effect
+            >
               <img src={job.imageUrl} alt={job.title} />
               <h3>{job.title}</h3>
             </div>
           ))
         ) : (
-          <p>No Experience jobs found</p>
+          <p>No Freshers jobs found</p>
         )}
       </div>
     </div>
