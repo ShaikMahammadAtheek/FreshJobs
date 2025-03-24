@@ -270,7 +270,7 @@
 
 @media screen and (max-width: 480px) {
     .freshers-container {
-        width: 95%; /* Adjust for very small screens */
+        width: 85%; /* Adjust for very small screens */
         margin-top: 140px;
     }
 
