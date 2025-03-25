@@ -67,7 +67,7 @@ function Footer() {
             </div>
 
             {/* Copyright Text */}
-            <p className="footer-text">&copy; 2025 JobHustles. All Rights Reserved.</p>
+            <p className="footer-text">&copy; 2025 FreshJobs. All Rights Reserved.</p>
         </footer>
     );
 }
